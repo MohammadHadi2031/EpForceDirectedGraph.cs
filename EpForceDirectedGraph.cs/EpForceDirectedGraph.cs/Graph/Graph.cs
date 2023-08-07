@@ -219,6 +219,11 @@ namespace EpForceDirectedGraph.cs
             return retEdgeList;
         }
 
+        public bool ContainsEdge(Node node1, Node node2)
+        {
+            return edges.Any(e => (e.Source == node1 && e.Target == node2) || (e.Target == node1 && e.Source == node2));
+        }
+
         public void RemoveNode(Node iNode)
         {
             if (m_nodeSet.ContainsKey(iNode.ID))

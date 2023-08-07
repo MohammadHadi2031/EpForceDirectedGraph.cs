@@ -74,6 +74,9 @@ namespace EpForceDirectedGraph.cs
             get;
             set;
         }
+
+        public object ViewModel { get; set; }
+
         public override int GetHashCode()
         {
             return ID.GetHashCode();
